@@ -1,11 +1,9 @@
 #pragma once
-class FGoblin
+#include "Character.h"
+
+class FGoblin :public FCharacter
 {
 public:
-	int MP;
-	int HP;
 
-	void Move();
-	void Attack();
 };
 

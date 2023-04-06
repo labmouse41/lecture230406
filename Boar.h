@@ -1,11 +1,9 @@
 #pragma once
-class FBoar
+#include "Character.h"
+
+class FBoar :public FCharacter
 {
 public:
-	int MP;
-	int HP;
 
-	void Move();
-	void Attack();
 };
 
