@@ -5,6 +5,8 @@ public:
 	int MP;
 	int HP;
 
+	
+
 	void Move();
 	void Attack();
 	FPlayer();
