@@ -6,6 +6,6 @@ class FBoar :public FCharacter
 public:
 	FBoar();
 	~FBoar();
-
+	virtual void Move() override;
 };
 

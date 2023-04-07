@@ -11,62 +11,37 @@ using namespace std;
 int main()
 {
 	srand((unsigned int)time(NULL));
+	int randNum = rand() % 3 + 1;
 
-	FPlayer* player = new FPlayer();
+	vector<FCharacter*> Characters;
+	Characters.push_back(new FPlayer());
 
-	int GoblinNumber = rand() % 3 + 1;
-	int SlimeNumber = rand() % 3 + 1;
-	int BoarNumber = rand() % 3 + 1;
-
-	vector<FGoblin*> Goblins;
-	for (int i = 0; i < GoblinNumber; i++)
+	randNum = rand() % 3 + 1;
+	for (int i = 0; i < randNum; i++)
 	{
-		Goblins.push_back(new FGoblin());
+		Characters.push_back(new FGoblin());
 	}
-	vector<FSlime*> Slimes;
-	for (int i = 0; i < GoblinNumber; i++)
+	randNum = rand() % 3 + 1;
+	for (int i = 0; i < randNum; i++)
 	{
-		Slimes.push_back(new FSlime());
+		Characters.push_back(new FSlime());
 	}
-	vector<FBoar*> Boars;
-	for (int i = 0; i < BoarNumber; i++)
+	randNum = rand() % 3 + 1;
+	for (int i = 0; i < randNum; i++)
 	{
-		Boars.push_back(new FBoar);
+		Characters.push_back(new FBoar());
 	}
 
-
-	//////
-	player->Move();
-
-	for (int i = 0; i < Goblins.size(); i++)
+	for (int i = 0; i < Characters.size(); i++)
 	{
-		Goblins[i]->Move();
+		Characters[i]->Move();
 	}
-	for (int i = 0; i < Slimes.size(); i++)
-	{
-		Slimes[i]->Move();
-	}
-	for (int i = 0; i < Boars.size(); i++)
-	{
-		Boars[i]->Move();
-	}
-	/////
 
+	for (int i = 0; i < Characters.size(); i++)
+	{
+		delete Characters[i];
+	}
 	
-	delete player;
-
-	for (int i = 0; i < Goblins.size(); i++)
-	{
-		delete Goblins[i];
-	}
-	for (int i = 0; i < Slimes.size(); i++)
-	{
-		delete Slimes[i];
-	}
-	for (int i = 0; i < Boars.size(); i++)
-	{
-		delete Boars[i];
-	}
 
 	return 0;
 }
