@@ -4,6 +4,8 @@
 class FBoar :public FCharacter
 {
 public:
+	FBoar();
+	~FBoar();
 
 };
 

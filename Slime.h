@@ -4,6 +4,8 @@
 class FSlime:public FCharacter
 {
 public:
+	FSlime();
+	~FSlime();
 
 };
 
