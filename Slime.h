@@ -5,7 +5,7 @@ class FSlime:public FCharacter
 {
 public:
 	FSlime();
-	~FSlime();
+	virtual ~FSlime();
 	virtual void Move() override;
 };
 

@@ -5,7 +5,7 @@ class FBoar :public FCharacter
 {
 public:
 	FBoar();
-	~FBoar();
+	virtual ~FBoar();
 	virtual void Move() override;
 };
 

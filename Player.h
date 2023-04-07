@@ -5,7 +5,7 @@ class FPlayer: public FCharacter
 {
 public:
 	FPlayer();
-	~FPlayer();
+	virtual ~FPlayer();
 	virtual void Move() override;
 };
 

@@ -5,7 +5,7 @@ class FGoblin :public FCharacter
 {
 public:
 	FGoblin();
-	~FGoblin();
+	virtual ~FGoblin();
 	virtual void Move() override;
 };
 
